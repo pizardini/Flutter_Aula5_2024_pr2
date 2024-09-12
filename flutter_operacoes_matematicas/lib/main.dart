@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_operacoes_matematicas/multiplicacao.dart';
 import 'package:flutter_operacoes_matematicas/soma.dart';
+import 'package:flutter_operacoes_matematicas/subtracao.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,7 +14,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: DefaultTabController(
-        length: 2,
+        length: 3,
         child: Scaffold(
           appBar: AppBar(
             bottom: const TabBar(
@@ -25,6 +27,10 @@ class MainApp extends StatelessWidget {
                   text: 'Subtração',
                   //icon: Icon(Icons.directions_transit),
                 ),
+                Tab(
+                  text: 'Multiplicação',
+                  //icon: Icon(Icons.directions_transit),
+                ),
               ],
             ),
           ),
@@ -33,7 +39,8 @@ class MainApp extends StatelessWidget {
               //Icon(Icons.directions_car),
               Soma(),
               //Icon(Icons.directions_transit),
-              Text('Subtração'),
+              Subtracao(),
+              Multiplicacao(),
             ],
           ),
         ),
